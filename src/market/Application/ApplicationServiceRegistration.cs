@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using Application.Services.AuthenticatorService;
 using Application.Services.AuthService;
 using Application.Services.UsersService;
@@ -20,6 +20,15 @@ using NArchitecture.Core.Mailing;
 using NArchitecture.Core.Mailing.MailKit;
 using NArchitecture.Core.Security.DependencyInjection;
 using NArchitecture.Core.Security.JWT;
+using Application.Services.Customers;
+using Application.Services.Products;
+using Application.Services.Addresses;
+using Application.Services.Categories;
+using Application.Services.Comments;
+using Application.Services.Complaints;
+using Application.Services.Orders;
+using Application.Services.Payments;
+using Application.Services.Ratings;
 
 namespace Application;
 
@@ -61,6 +70,32 @@ public static class ApplicationServiceRegistration
 
         services.AddSecurityServices<Guid, int, Guid>(tokenOptions);
 
+        services.AddScoped<ICustomerService, CustomerManager>();
+        services.AddScoped<IProductService, ProductManager>();
+        services.AddScoped<IAddressService, AddressManager>();
+        services.AddScoped<ICategoryService, CategoryManager>();
+        services.AddScoped<ICommentService, CommentManager>();
+        services.AddScoped<IComplaintService, ComplaintManager>();
+        services.AddScoped<IOrderService, OrderManager>();
+        services.AddScoped<IPaymentService, PaymentManager>();
+        services.AddScoped<IRatingService, RatingManager>();
+        services.AddScoped<IRatingService, RatingManager>();
+        services.AddScoped<IAddressService, AddressManager>();
+        services.AddScoped<IOrderService, OrderManager>();
+        services.AddScoped<IPaymentService, PaymentManager>();
+        services.AddScoped<ICommentService, CommentManager>();
+        services.AddScoped<ICommentService, CommentManager>();
+        services.AddScoped<IOrderService, OrderManager>();
+        services.AddScoped<IPaymentService, PaymentManager>();
+        services.AddScoped<ICategoryService, CategoryManager>();
+        services.AddScoped<IAddressService, AddressManager>();
+        services.AddScoped<ICommentService, CommentManager>();
+        services.AddScoped<IComplaintService, ComplaintManager>();
+        services.AddScoped<ICustomerService, CustomerManager>();
+        services.AddScoped<IOrderService, OrderManager>();
+        services.AddScoped<IPaymentService, PaymentManager>();
+        services.AddScoped<IProductService, ProductManager>();
+        services.AddScoped<IRatingService, RatingManager>();
         return services;
     }
 

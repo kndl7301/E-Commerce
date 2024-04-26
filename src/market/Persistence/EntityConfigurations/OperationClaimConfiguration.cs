@@ -6,6 +6,15 @@ using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NArchitecture.Core.Security.Constants;
+using Application.Features.Customers.Constants;
+using Application.Features.Products.Constants;
+using Application.Features.Addresses.Constants;
+using Application.Features.Categories.Constants;
+using Application.Features.Comments.Constants;
+using Application.Features.Complaints.Constants;
+using Application.Features.Orders.Constants;
+using Application.Features.Payments.Constants;
+using Application.Features.Ratings.Constants;
 
 namespace Persistence.EntityConfigurations;
 
@@ -97,6 +106,370 @@ public class OperationClaimConfiguration : IEntityTypeConfiguration<OperationCla
         );
         #endregion
 
+        
+        #region Customers CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Admin },
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Read },
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Write },
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Create },
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Update },
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Products CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Read },
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Write },
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Create },
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Update },
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Addresses CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Admin },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Read },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Write },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Create },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Update },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Categories CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Admin },
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Read },
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Write },
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Create },
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Update },
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Comments CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Read },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Write },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Create },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Update },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Complaints CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Read },
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Write },
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Create },
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Update },
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Orders CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Admin },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Read },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Write },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Create },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Update },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Payments CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Read },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Write },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Create },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Update },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Ratings CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Read },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Write },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Create },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Update },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Ratings CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Read },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Write },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Create },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Update },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Addresses CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Admin },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Read },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Write },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Create },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Update },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Orders CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Admin },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Read },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Write },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Create },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Update },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Payments CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Read },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Write },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Create },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Update },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Comments CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Read },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Write },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Create },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Update },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Comments CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Read },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Write },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Create },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Update },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Orders CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Admin },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Read },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Write },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Create },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Update },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Payments CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Read },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Write },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Create },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Update },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Categories CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Admin },
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Read },
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Write },
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Create },
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Update },
+                new() { Id = ++lastId, Name = CategoriesOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Addresses CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Admin },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Read },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Write },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Create },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Update },
+                new() { Id = ++lastId, Name = AddressesOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Comments CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Read },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Write },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Create },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Update },
+                new() { Id = ++lastId, Name = CommentsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Complaints CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Read },
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Write },
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Create },
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Update },
+                new() { Id = ++lastId, Name = ComplaintsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Customers CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Admin },
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Read },
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Write },
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Create },
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Update },
+                new() { Id = ++lastId, Name = CustomersOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Orders CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Admin },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Read },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Write },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Create },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Update },
+                new() { Id = ++lastId, Name = OrdersOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Payments CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Read },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Write },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Create },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Update },
+                new() { Id = ++lastId, Name = PaymentsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Products CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Read },
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Write },
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Create },
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Update },
+                new() { Id = ++lastId, Name = ProductsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Ratings CRUD
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Read },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Write },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Create },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Update },
+                new() { Id = ++lastId, Name = RatingsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
         return featureOperationClaims;
     }
 #pragma warning restore S1854 // Unused assignments should be removed

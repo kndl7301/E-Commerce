@@ -13,6 +13,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(u => u.Id).HasColumnName("Id").IsRequired();
         builder.Property(u => u.Email).HasColumnName("Email").IsRequired();
+        builder.Property(u => u.FirstName).HasColumnName("FirstName").IsRequired();
+        builder.Property(u => u.LastName).HasColumnName("LastName").IsRequired();
+        builder.Property(u => u.Phone).HasColumnName("Phone").IsRequired();
         builder.Property(u => u.PasswordSalt).HasColumnName("PasswordSalt").IsRequired();
         builder.Property(u => u.PasswordHash).HasColumnName("PasswordHash").IsRequired();
         builder.Property(u => u.AuthenticatorType).HasColumnName("AuthenticatorType").IsRequired();
@@ -28,6 +31,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasMany(u => u.OtpAuthenticators);
 
         builder.HasData(_seeds);
+        
 
         builder.HasBaseType((string)null!);
     }
@@ -47,6 +51,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
                 {
                     Id = AdminId,
                     Email = "narch@kodlama.io",
+                    FirstName = "Kendal",
+                    LastName = "YÜce",
+                    Phone = "05446939067",
                     PasswordHash = passwordHash,
                     PasswordSalt = passwordSalt
                 };
